@@ -165,7 +165,7 @@ artifact/*
 static/*
 templates/*
 template.py
-app.py
+app_F.py
 us_visa.egg-info/*
 logs/*
 flowcharts/*
