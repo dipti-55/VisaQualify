@@ -162,3 +162,9 @@ cython_debug/
 #.idea/
 
 artifact/*
+static/*
+templates/*
+template.py
+us_visa.egg-info/*
+logs/*
+flowcharts/*
