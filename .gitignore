@@ -162,8 +162,8 @@ cython_debug/
 #.idea/
 
 # artifact/*
-# static/*
-# templates/*
+static/*
+templates/*
 template.py
 app_F.py
 app_str.py
