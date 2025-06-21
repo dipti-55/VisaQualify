@@ -2,11 +2,7 @@
 
 A machine learning-based web application to predict whether a U.S. visa application will be **certified** or **denied** based on applicant profile data.
 
-<!-- ## 🔗 Live Demo
-
-👉 [Click here to try the app](https://your-deployment-link.com)
-
---- -->
+### 🔗 Demo 👉 [Click here](https://drive.google.com/file/d/1WqcZO0EyG-wUP0XI0xJiUCBBbGeooO3M/view?usp=sharing)
 
 
 # 🧩 Problem Statement
@@ -47,6 +43,9 @@ This project aims to develop a machine learning classification model that predic
 
 # ⚙️ Project Structure
 ```
+├── .github/
+|   ├── workflows/
+|       ├── aws.yaml
 ├── artifact/
 ├── config/
 |   ├── model.yaml
@@ -88,6 +87,56 @@ This project aims to develop a machine learning classification model that predic
 ├── requirements.txt
 └── setup.py
 ```
+
+
+
+# 🔄 Workflow 
+
+### 1. 📥 **Data Ingestion**
+
+* Connects to **MongoDB** to fetch raw data.
+* Stores locally for further processing.
+
+### 2. ✅ **Data Validation**
+
+* Validates schema and checks data quality.
+* Detects **data drift** using **Evidently AI**.
+
+### 3. 🔄 **Data Transformation**
+
+* Encodes categorical features and scales numericals.
+* Saves transformation objects for consistent inference.
+
+### 4. 🧠 **Model Training**
+
+* Trains ML models.
+* Uses cross-validation and saves best model.
+
+### 5. 📊 **Model Evaluation**
+
+* Compares new model with previous ones.
+* Promotes only if performance improves.
+
+### 6. 📦 **Model Pushing**
+
+* Uploads final model to **AWS S3**.
+
+### 7. 🧪 **Prediction Pipeline**
+
+* Makes predictions using saved model via:
+
+  * ✅ **Streamlit Web App**
+  * ⚙️ CLI (`demo.py`)
+
+
+### 8. 🚀 **CI/CD Pipeline**
+
+* Uses **GitHub Actions** + **Docker** + **AWS (ECR & EC2)** for automated deployment.
+
+### 9. 💻 **Streamlit Web Application**
+* User-friendly UI for non-technical users.
+
+
 ---
 
 # 🧠 Tech Stack / Tools Used
@@ -115,7 +164,7 @@ This project aims to develop a machine learning classification model that predic
 
 ---
 
-# 🚀 How to Run the Project
+# 🚀 How to Run ?
 
 Follow the steps below to set up and run locally:
 
@@ -176,8 +225,8 @@ python demo.py
 ```
 
 
----
-<!-- 
+<!-- ---
+
 # 🔄 Project Workflow
 
 This project follows a modular and production-ready **ML pipeline architecture**, broken down into the following stages:
@@ -247,5 +296,5 @@ You can include a simple diagram in your `flowcharts/` folder and reference it:
 
 ```markdown
 ![Project Workflow](flowcharts/project_workflow.png)
-```
- -->
+``` -->
+
